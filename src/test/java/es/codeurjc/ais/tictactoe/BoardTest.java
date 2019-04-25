@@ -21,14 +21,26 @@ public class BoardTest {
 		Cell cell = board.getCell(0);
 		cell.active = true;
 		cell.value = xValue;
-		
+
+		cell = board.getCell(3);
+		cell.active = true;
+		cell.value = oValue;
+
 		cell = board.getCell(1);
 		cell.active = true;
 		cell.value = xValue;
 
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = oValue;
+
 		cell = board.getCell(2);
 		cell.active = true;
 		cell.value = xValue;
+		
+		cell = board.getCell(5);
+		cell.active = true;
+		cell.value = oValue;
 
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
@@ -46,14 +58,26 @@ public class BoardTest {
 
 		// Given
 		Board board = new Board();
+		
+		Cell cell = board.getCell(0);
+		cell.active = true;
+		cell.value = xValue;
 
-		Cell cell = board.getCell(3);
+		cell = board.getCell(3);
 		cell.active = true;
 		cell.value = oValue;
-		
+
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = xValue;
+
 		cell = board.getCell(4);
 		cell.active = true;
 		cell.value = oValue;
+
+		cell = board.getCell(2);
+		cell.active = true;
+		cell.value = xValue;
 
 		cell = board.getCell(5);
 		cell.active = true;
@@ -79,12 +103,24 @@ public class BoardTest {
 		Cell cell = board.getCell(6);
 		cell.active = true;
 		cell.value = xValue;
-		
+
+		cell = board.getCell(0);
+		cell.active = true;
+		cell.value = xValue;
+
 		cell = board.getCell(7);
 		cell.active = true;
 		cell.value = xValue;
 
+		cell = board.getCell(4);
+		cell.active = true;
+		cell.value = xValue;
+
 		cell = board.getCell(8);
+		cell.active = true;
+		cell.value = xValue;
+		
+		cell = board.getCell(2);
 		cell.active = true;
 		cell.value = xValue;
 
@@ -106,13 +142,25 @@ public class BoardTest {
 		// Given
 		Board board = new Board();
 
-		Cell cell = board.getCell(0);
+		Cell cell = board.getCell(1);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(0);
 		cell.active = true;
 		cell.value = oValue;
-		
+
+		cell = board.getCell(5);
+		cell.active = true;
+		cell.value = xValue;
+
 		cell = board.getCell(3);
 		cell.active = true;
 		cell.value = oValue;
+		
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = xValue;
 
 		cell = board.getCell(6);
 		cell.active = true;
@@ -138,10 +186,18 @@ public class BoardTest {
 		Cell cell = board.getCell(1);
 		cell.active = true;
 		cell.value = xValue;
-		
+
+		cell = board.getCell(2);
+		cell.active = true;
+		cell.value = oValue;
+
 		cell = board.getCell(4);
 		cell.active = true;
 		cell.value = xValue;
+		
+		cell = board.getCell(3);
+		cell.active = true;
+		cell.value = oValue;
 
 		cell = board.getCell(7);
 		cell.active = true;
@@ -164,13 +220,25 @@ public class BoardTest {
 		// Given
 		Board board = new Board();
 
-		Cell cell = board.getCell(2);
+		Cell cell = board.getCell(1);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(2);
 		cell.active = true;
 		cell.value = oValue;
-		
+
+		cell = board.getCell(3);
+		cell.active = true;
+		cell.value = xValue;
+
 		cell = board.getCell(5);
 		cell.active = true;
 		cell.value = oValue;
+		
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = xValue;
 
 		cell = board.getCell(8);
 		cell.active = true;
@@ -196,14 +264,26 @@ public class BoardTest {
 		Cell cell = board.getCell(0);
 		cell.active = true;
 		cell.value = xValue;
-		
+
+		cell = board.getCell(1);
+		cell.active = true;
+		cell.value = oValue;
+
 		cell = board.getCell(4);
 		cell.active = true;
 		cell.value = xValue;
+		
+		cell = board.getCell(3);
+		cell.active = true;
+		cell.value = oValue;
 
 		cell = board.getCell(8);
 		cell.active = true;
 		cell.value = xValue;
+		
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = oValue;
 		
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
@@ -217,18 +297,30 @@ public class BoardTest {
 	}
 
 	@Test
-	public void testBoard_x0247_o13568() {
+	public void testBoard_o246() {
 
 		// Given
 		Board board = new Board();
 
-		Cell cell = board.getCell(2);
+		Cell cell = board.getCell(0);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(2);
 		cell.active = true;
 		cell.value = oValue;
-		
+
+		cell = board.getCell(5);
+		cell.active = true;
+		cell.value = xValue;
+
 		cell = board.getCell(4);
 		cell.active = true;
 		cell.value = oValue;
+		
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = xValue;
 
 		cell = board.getCell(6);
 		cell.active = true;
@@ -246,7 +338,115 @@ public class BoardTest {
 	}
 
 	@Test
-	public void testBoard_checkDraw() {
+	public void testBoard_checkDraw_x02567_o1348() {
+
+		// Given
+		Board board = new Board();
+
+		Cell cell = board.getCell(0);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(1);
+		cell.active = true;
+		cell.value = oValue;
+
+		cell = board.getCell(2);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(3);
+		cell.active = true;
+		cell.value = oValue;
+		
+		cell = board.getCell(5);
+		cell.active = true;
+		cell.value = xValue;
+		
+		cell = board.getCell(4);
+		cell.active = true;
+		cell.value = oValue;
+
+		cell = board.getCell(6);
+		cell.active = true;
+		cell.value = xValue;
+		
+		cell = board.getCell(8);
+		cell.active = true;
+		cell.value = oValue;
+
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = xValue;
+
+		// When
+		int [] calculatedCells = board.getCellsIfWinner(oValue);
+		int [] expectedCells = null;
+		boolean checkDrawResult = board.checkDraw();
+		
+		// Then
+		assertArrayEquals(calculatedCells,expectedCells);
+		assertThat(checkDrawResult).isEqualTo(true);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
+	}
+	
+	@Test
+	public void testBoard_checkDraw_x02357_o1468() {
+
+		// Given
+		Board board = new Board();
+
+		Cell cell = board.getCell(0);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(1);
+		cell.active = true;
+		cell.value = oValue;
+
+		cell = board.getCell(2);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(3);
+		cell.active = true;
+		cell.value = xValue;
+		
+		cell = board.getCell(4);
+		cell.active = true;
+		cell.value = oValue;
+		
+		cell = board.getCell(5);
+		cell.active = true;
+		cell.value = xValue;
+
+		cell = board.getCell(6);
+		cell.active = true;
+		cell.value = oValue;
+		
+		cell = board.getCell(8);
+		cell.active = true;
+		cell.value = oValue;
+
+		cell = board.getCell(7);
+		cell.active = true;
+		cell.value = xValue;
+		
+		// When
+		int [] calculatedCells = board.getCellsIfWinner(oValue);
+		int [] expectedCells = null;
+		boolean checkDrawResult = board.checkDraw();
+		
+		// Then
+		assertArrayEquals(calculatedCells,expectedCells);
+		assertThat(checkDrawResult).isEqualTo(true);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
+	}
+	
+	@Test
+	public void testBoard_checkDraw_x02457_o1368() {
 
 		// Given
 		Board board = new Board();
@@ -273,12 +473,12 @@ public class BoardTest {
 		
 		cell = board.getCell(5);
 		cell.active = true;
-		cell.value = oValue;
+		cell.value = xValue;
 
 		cell = board.getCell(6);
 		cell.active = true;
 		cell.value = oValue;
-		
+
 		cell = board.getCell(7);
 		cell.active = true;
 		cell.value = xValue;
@@ -286,14 +486,11 @@ public class BoardTest {
 		cell = board.getCell(8);
 		cell.active = true;
 		cell.value = oValue;
-
+		
 		// When
-		int [] calculatedCells = board.getCellsIfWinner(oValue);
-		int [] expectedCells = null;
 		boolean checkDrawResult = board.checkDraw();
 		
 		// Then
-		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(true);
 		assertThat(board.getCellsIfWinner(xValue)).isNull();
 		assertThat(board.getCellsIfWinner(oValue)).isNull();
