@@ -262,10 +262,10 @@ public class BoardTest {
 		setCell(board, 2, xValue);
 		setCell(board, 3, oValue);
 		setCell(board, 4, xValue);
-		setCell(board, 5, xValue);
 		setCell(board, 6, oValue);
-		setCell(board, 7, xValue);
+		setCell(board, 5, xValue);
 		setCell(board, 8, oValue);
+		setCell(board, 7, xValue);
 		
 		// When
 		boolean checkDrawResult = board.checkDraw();
