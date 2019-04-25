@@ -38,6 +38,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
 	}
 	
 	@Test
@@ -66,6 +67,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
 	}
 
 	@Test
@@ -94,6 +96,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
 	}
 
 	
@@ -123,6 +126,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
 	}
 
 	@Test
@@ -151,6 +155,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
 	}
 	
 	@Test
@@ -179,6 +184,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
 	}
 	
 	@Test
@@ -207,6 +213,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
 	}
 
 	@Test
@@ -235,6 +242,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(false);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
 	}
 
 	@Test
@@ -287,5 +295,7 @@ public class BoardTest {
 		// Then
 		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(true);
+		assertThat(board.getCellsIfWinner(xValue)).isNull();
+		assertThat(board.getCellsIfWinner(oValue)).isNull();
 	}
 }
