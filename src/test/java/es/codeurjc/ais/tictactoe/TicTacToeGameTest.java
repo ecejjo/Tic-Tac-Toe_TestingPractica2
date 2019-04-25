@@ -19,18 +19,50 @@ import es.codeurjc.ais.tictactoe.TicTacToeGame.WinnerValue;
 public class TicTacToeGameTest {
 	
 	@Test
-	public void player1WinsTest() throws InterruptedException {
+	public void player1WinsTest1() throws InterruptedException {
 		ticTacToeRunTest(new int[] { 0, 3, 1, 7, 2 }, 0);
-	}
-	
-	@Test
-	public void player2WinsTest() throws InterruptedException {
-		ticTacToeRunTest(new int[] { 0, 3, 7, 4, 2, 5 }, 1);
 	}
 
 	@Test
-	public void drawTest() throws InterruptedException {
+	public void player1WinsTest2() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 6, 0, 7, 4, 8 }, 0);
+	}
+	
+	@Test
+	public void player1WinsTest3() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 1, 2, 4, 3, 7 }, 0);
+	}
+
+
+	@Test
+	public void player2WinsTest1() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 0, 3, 7, 4, 2, 5 }, 1);
+	}
+	
+	@Test
+	public void player2WinsTest2() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 1, 0, 5, 3, 7, 6 }, 1);
+	}
+
+	@Test
+	public void player2WinsTest3() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 1, 2, 3, 5, 7, 8 }, 1);
+	}
+
+
+	@Test
+	public void drawTest1() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 0, 1, 2, 3, 5, 4, 6, 8, 7 }, -1);
+	}
+
+	@Test
+	public void drawTest2() throws InterruptedException {
 		ticTacToeRunTest(new int[] { 0, 1, 2, 4, 3, 6, 5, 8, 7 }, -1);
+	}
+
+	@Test
+	public void drawTest3() throws InterruptedException {
+		ticTacToeRunTest(new int[] { 0, 1, 2, 3, 4, 6, 5, 8, 7 }, -1);
 	}
 
 
