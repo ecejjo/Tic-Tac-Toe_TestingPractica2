@@ -76,7 +76,6 @@ public class BoardTest {
 		setCell(board, 7, xValue);
 		setCell(board, 4, oValue);
 		setCell(board, 8, xValue);
-		setCell(board, 2, oValue);
 
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
