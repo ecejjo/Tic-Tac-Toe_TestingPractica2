@@ -8,39 +8,29 @@ import org.junit.jupiter.api.Test;
 import es.codeurjc.ais.tictactoe.TicTacToeGame.Cell;
 
 public class BoardTest {
-	
+
+	Board board = new Board();
+
 	String xValue = "X";
 	String oValue = "O";
+	
+	public void setCell(Board board, int cellNumber, String value) {
+		Cell cell = board.getCell(cellNumber);
+		cell.active = true;
+		cell.value = value;		
+	}
 
 	@Test
 	public void testBoard_x012() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(1);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = oValue;
+		board = new Board();		
+		setCell(board, 0, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 1, xValue);
+		setCell(board, 7, oValue);
+		setCell(board, 2, xValue);
+		setCell(board, 5, oValue);
 
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
@@ -57,32 +47,14 @@ public class BoardTest {
 	public void testBoard_o345() {
 
 		// Given
-		Board board = new Board();
+		board = new Board();		
+		setCell(board, 0, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 7, xValue);
+		setCell(board, 4, oValue);
+		setCell(board, 2, xValue);
+		setCell(board, 5, oValue);
 		
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = oValue;
-
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(oValue);
 		int [] expectedCells = {3, 4, 5};
@@ -98,31 +70,13 @@ public class BoardTest {
 	public void testBoard_x678() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(6);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(8);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = xValue;
+		board = new Board();		
+		setCell(board, 6, xValue);
+		setCell(board, 0, oValue);
+		setCell(board, 7, xValue);
+		setCell(board, 4, oValue);
+		setCell(board, 8, xValue);
+		setCell(board, 2, oValue);
 
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
@@ -140,31 +94,13 @@ public class BoardTest {
 	public void testBoard_o036() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(1);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(0);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(6);
-		cell.active = true;
-		cell.value = oValue;
+		board = new Board();		
+		setCell(board, 1, xValue);
+		setCell(board, 0, oValue);
+		setCell(board, 5, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 7, xValue);
+		setCell(board, 6, oValue);
 		
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(oValue);
@@ -181,27 +117,12 @@ public class BoardTest {
 	public void testBoard_x147() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(1);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
+		board = new Board();		
+		setCell(board, 1, xValue);
+		setCell(board, 2, oValue);
+		setCell(board, 4, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 7, xValue);
 		
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
@@ -218,32 +139,14 @@ public class BoardTest {
 	public void testBoard_o258() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(1);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(8);
-		cell.active = true;
-		cell.value = oValue;
-		
+		board = new Board();		
+		setCell(board, 1, xValue);
+		setCell(board, 2, oValue);
+		setCell(board, 3, xValue);
+		setCell(board, 5, oValue);
+		setCell(board, 7, xValue);
+		setCell(board, 8, oValue);
+				
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(oValue);
 		int [] expectedCells = {2, 5, 8};
@@ -259,31 +162,13 @@ public class BoardTest {
 	public void testBoard_x048() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(1);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(8);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = oValue;
+		board = new Board();		
+		setCell(board, 0, xValue);
+		setCell(board, 1, oValue);
+		setCell(board, 4, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 8, xValue);
+		setCell(board, 7, oValue);
 		
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(xValue);
@@ -300,31 +185,13 @@ public class BoardTest {
 	public void testBoard_o246() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(6);
-		cell.active = true;
-		cell.value = oValue;
+		board = new Board();		
+		setCell(board, 0, xValue);
+		setCell(board, 2, oValue);
+		setCell(board, 5, xValue);
+		setCell(board, 4, oValue);
+		setCell(board, 7, xValue);
+		setCell(board, 6, oValue);
 		
 		// When
 		int [] calculatedCells = board.getCellsIfWinner(oValue);
@@ -341,51 +208,21 @@ public class BoardTest {
 	public void testBoard_checkDraw_x02567_o1348() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(1);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(6);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(8);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
+		board = new Board();		
+		setCell(board, 0, xValue);
+		setCell(board, 1, oValue);
+		setCell(board, 2, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 5, xValue);
+		setCell(board, 4, oValue);
+		setCell(board, 6, xValue);
+		setCell(board, 8, oValue);
+		setCell(board, 7, xValue);
 
 		// When
-		int [] calculatedCells = board.getCellsIfWinner(oValue);
-		int [] expectedCells = null;
 		boolean checkDrawResult = board.checkDraw();
 		
 		// Then
-		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(true);
 		assertThat(board.getCellsIfWinner(xValue)).isNull();
 		assertThat(board.getCellsIfWinner(oValue)).isNull();
@@ -395,51 +232,21 @@ public class BoardTest {
 	public void testBoard_checkDraw_x02357_o1468() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(1);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(6);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(8);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
+		board = new Board();
+		setCell(board, 0, xValue);
+		setCell(board, 1, oValue);
+		setCell(board, 2, xValue);
+		setCell(board, 4, oValue);
+		setCell(board, 3, xValue);
+		setCell(board, 6, oValue);
+		setCell(board, 5, xValue);
+		setCell(board, 8, oValue);
+		setCell(board, 7, xValue);
 		
 		// When
-		int [] calculatedCells = board.getCellsIfWinner(oValue);
-		int [] expectedCells = null;
 		boolean checkDrawResult = board.checkDraw();
 		
 		// Then
-		assertArrayEquals(calculatedCells,expectedCells);
 		assertThat(checkDrawResult).isEqualTo(true);
 		assertThat(board.getCellsIfWinner(xValue)).isNull();
 		assertThat(board.getCellsIfWinner(oValue)).isNull();
@@ -449,43 +256,16 @@ public class BoardTest {
 	public void testBoard_checkDraw_x02457_o1368() {
 
 		// Given
-		Board board = new Board();
-
-		Cell cell = board.getCell(0);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(1);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(2);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(3);
-		cell.active = true;
-		cell.value = oValue;
-		
-		cell = board.getCell(4);
-		cell.active = true;
-		cell.value = xValue;
-		
-		cell = board.getCell(5);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(6);
-		cell.active = true;
-		cell.value = oValue;
-
-		cell = board.getCell(7);
-		cell.active = true;
-		cell.value = xValue;
-
-		cell = board.getCell(8);
-		cell.active = true;
-		cell.value = oValue;
+		board = new Board();		
+		setCell(board, 0, xValue);
+		setCell(board, 1, oValue);
+		setCell(board, 2, xValue);
+		setCell(board, 3, oValue);
+		setCell(board, 4, xValue);
+		setCell(board, 5, xValue);
+		setCell(board, 6, oValue);
+		setCell(board, 7, xValue);
+		setCell(board, 8, oValue);
 		
 		// When
 		boolean checkDrawResult = board.checkDraw();
