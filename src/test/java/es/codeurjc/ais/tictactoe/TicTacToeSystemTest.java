@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TicTacToeEndToEndWithSeleniumTests {
+public class TicTacToeSystemTest {
 
 	/*
 	Pruebas de sistema de la aplicación: Para verificar que la aplicación completa funciona
